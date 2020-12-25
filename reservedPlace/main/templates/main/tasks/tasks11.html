@@ -1,0 +1,21 @@
+{% extends 'main/loaut.html' %}
+{% block title %}Задания {% endblock title %}
+{% block content %}
+<main role="main" class="col-md-8 ml-sm-auto col-lg-11 pt-3 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+        <h1 class="h2">{{title}}</h1>
+      </div>
+    <h1 class="h5">php уровень: {{level}}</h1><p>{{body}}</p>
+    <p class="mt-3 font-weight-bold">Решение: </p>
+
+    <i id="ent">0</i>
+
+    <button class="btn btn-outline-primary" onclick="document.getElementById('kod').hidden = document.getElementById('kod').hidden !== true;">Показать код</button>
+    <a href="/tasks" class="btn btn-outline-primary">Вернуться</a>
+    <div id="kod" style="background: lightgrey; width: 350px; padding-left: 10px; border-radius: 10px" class="mt-3" hidden="true">
+<pre>
+
+</pre>
+    </div>
+</main>
+{% endblock content %}

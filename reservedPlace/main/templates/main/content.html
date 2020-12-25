@@ -1,0 +1,37 @@
+<div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" src="../../static/main/img{{ i.image.url }}" width="500" height="450">
+                    </div>
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">{{ i.title }}</strong>
+                        <h3 class="mb-4">{{ i.Anons }}</h3>
+                        {% for j in comment %}
+
+                        {% if i.id == j.id%}
+                                <div class="mb-1" style="color: #27ae60">{{ j.name }}</div>
+                                <p class="card-text mb-auto text-muted">{{ j.body }}</p>
+                        {% else %}
+<!--                         <p class="card-text mb-auto text-muted"></p>-->
+                        {% endif %}
+                        {% endfor %}
+                        <a href="post_id/{{i.id}}" class="btn btn-primary">Добавить комментарий </a>
+                    </div></div>
+
+
+
+
+        <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="" style="height: 225px; width: 100%; display: block;" src="../../static/main/img{{ i.image.url }}" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>

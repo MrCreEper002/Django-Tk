@@ -1,0 +1,13 @@
+{% extends 'main/loaut.html' %}
+{% block title %}Задания {% endblock title %}
+{% block content %}
+<main role="main" class="col-md-8 ml-sm-auto col-lg-12 pt-3 px-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+        <h1 class="h2">Задачи</h1>
+    </div>
+    {% for i in task %}
+        <a href="tasks/{{i.id}}" class="btn btn-outline-primary mb-2">Задача {{i.id}}: {{i.title}}</a>
+    {% endfor %}
+
+</main>
+{% endblock content %}
